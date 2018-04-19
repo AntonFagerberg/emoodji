@@ -1,0 +1,14 @@
+<%= for post <- @posts do %>
+  <div class="post">
+    <%= post.message %> (<%= post.user %>)
+  </div>
+  <hr/>
+<% end %>
+
+<form method="post" target="posts">
+  <input type="text" name="message" size="1" />
+  <input type="submit" value="Save" />
+  <input type="hidden" id="_csrf_token" name="_csrf_token" value="<%= @csrf_token %>">
+</form>
+
+<a href="sign-out">Sign out</a>

@@ -1,0 +1,24 @@
+ iex -S mix phx.server
+ 
+mix phx.gen.schema Post posts message:string userId:integer
+
+Emoodji.Repo.insert(%Emoodji.Post{message: "😭", userId: 1})
+
+alias Emoodji.Repo
+alias Emoodji.Post
+import Ecto.Query
+Repo.one(from p in Post, select: p.message)
+Repo.all(from p in Post, select: %{p.user_id => p.message})
+
+changeset = Post.changeset(%Post{}, %{})
+
+CSRF
+<%= post.message %> :(
+
+<%= post.message %> (<%= post.user %>) <- field not found
+
+- Live reload (which files)
+- Ecto
+- Conn pipeline
+- Pry!
+- |>

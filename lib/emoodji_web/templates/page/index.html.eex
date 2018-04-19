@@ -1,0 +1,5 @@
+<form method="post" target="login">
+  <input type="text" name="username" />
+  <input type="submit" value="Log in" />
+  <input type="hidden" id="_csrf_token" name="_csrf_token" value="<%= @csrf_token %>">
+</form>
