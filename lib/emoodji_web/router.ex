@@ -29,16 +29,9 @@ defmodule EmoodjiWeb.Router do
   end
 
   scope "/posts", EmoodjiWeb do
-    pipe_through :secure # Use the default browser stack
+    pipe_through :secure
     
     get "/", PostController, :index
     post "/", PostController, :create
   end
-  
-  
-
-  # Other scopes may use custom stacks.
-  # scope "/api", EmoodjiWeb do
-  #   pipe_through :api
-  # end
 end

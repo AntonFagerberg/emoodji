@@ -25,7 +25,7 @@ defmodule EmoodjiWeb.PostController do
     changeset = Post.changeset(%Post{}, %{user_id: user_id, message: message})
     
     if changeset.valid? do
-      Repo.insert(changeset)
+      Repo.insert!(changeset)
       
       conn
       |> put_flash("info", "Emoodji saved!")

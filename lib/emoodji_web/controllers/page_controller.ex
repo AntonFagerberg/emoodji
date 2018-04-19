@@ -20,6 +20,7 @@ defmodule EmoodjiWeb.PageController do
   
   def authenticate(conn, _params) do 
     %{"username" => username} = conn.params
+    
     user_id = 
       Repo.one(
         from u in User,

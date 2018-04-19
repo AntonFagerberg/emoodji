@@ -22,3 +22,5 @@ CSRF
 - Conn pipeline
 - Pry!
 - |>
+- Expected pamars to be map
+- Migrations
