@@ -1,13 +1,14 @@
 <%= for post <- @posts do %>
   <div class="post">
-    <%= post.message %> (<%= post.user %>)
+    <%= post.message %>
   </div>
+  <div><%= post.user %> (<%= format_timestamp(post.timestamp) %>)</div>
   <hr/>
 <% end %>
 
 <form method="post" target="posts">
-  <input type="text" name="message" size="1" />
-  <input type="submit" value="Save" />
+  <input type="text" name="message" size="1" autocomplete="off" />
+  <input type="submit" value="Post" />
   <input type="hidden" id="_csrf_token" name="_csrf_token" value="<%= @csrf_token %>">
 </form>
 

@@ -28,7 +28,9 @@ defmodule EmoodjiWeb.PageController do
       )
       
     if (user_id == nil) do
-      redirect conn, to: "/login"
+      conn
+      |> put_flash("error", "User '#{username}' did not exist!")
+      |> redirect(to: "/login")
     else
       conn
       |> put_session("user_id", user_id)

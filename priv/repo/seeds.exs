@@ -11,6 +11,10 @@
 # and so on) as they will fail if something goes wrong.
 
 Emoodji.Repo.insert!(%Emoodji.User{name: "Anton", id: 1})
+Emoodji.Repo.insert!(%Emoodji.User{name: "Anna", id: 2})
 Emoodji.Repo.insert!(%Emoodji.Post{message: "🤨", user_id: 1})
+Emoodji.Repo.insert!(%Emoodji.Post{message: "🙂", user_id: 2})
 Emoodji.Repo.insert!(%Emoodji.Post{message: "😭", user_id: 1})
-Emoodji.Repo.insert!(%Emoodji.Post{message: "🙂", user_id: 1})
+Emoodji.Repo.insert!(%Emoodji.Post{message: "🌸", user_id: 1})
+Emoodji.Repo.insert!(%Emoodji.Post{message: "😂", user_id: 2})
+Emoodji.Repo.insert!(%Emoodji.Post{message: "🎁", user_id: 2})

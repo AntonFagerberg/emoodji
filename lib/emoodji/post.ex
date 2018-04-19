@@ -13,8 +13,8 @@ defmodule Emoodji.Post do
   @doc false
   def changeset(post, attrs) do
     post
-    |> cast(attrs, [:message, :userId])
-    |> validate_required([:message, :userId])
+    |> cast(attrs, [:message, :user_id])
+    |> validate_required([:message, :user_id])
     |> validate_length(:message, min: 1)
     |> validate_length(:message, max: 1)
   end
