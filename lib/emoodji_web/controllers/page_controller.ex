@@ -15,7 +15,7 @@ defmodule EmoodjiWeb.PageController do
   end
 
   def login(conn, _params) do
-    render conn, "index.html", csrf_token: get_csrf_token()
+    render conn, "index.html"
   end
   
   def authenticate(conn, _params) do 

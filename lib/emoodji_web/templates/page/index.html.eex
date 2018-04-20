@@ -1,5 +1,5 @@
 <form method="post" target="login">
   <input type="text" name="username" autocomplete="off" />
   <input type="submit" value="Log in" />
-  <input type="hidden" id="_csrf_token" name="_csrf_token" value="<%= @csrf_token %>">
+  <input type="hidden" id="_csrf_token" name="_csrf_token" value="<%= get_csrf_token() %>">
 </form>

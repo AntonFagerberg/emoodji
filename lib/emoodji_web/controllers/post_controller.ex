@@ -16,7 +16,7 @@ defmodule EmoodjiWeb.PostController do
       select: %{user: u.name, message: p.message, timestamp: p.inserted_at}
     
     posts = Repo.all(query)
-    render conn, "index.html", posts: posts, csrf_token: get_csrf_token()
+    render conn, "index.html", posts: posts
   end
   
   def create(conn, _params) do
