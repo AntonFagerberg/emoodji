@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :emoodji, Emoodji.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "emoodji_test",
+  username: "anton",
+  password: "",
+  database: "emoodji_dev",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

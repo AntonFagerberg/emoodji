@@ -1,10 +1,10 @@
 defmodule Emoodji.UserTest do
-  use Emoodji.ModelCase
+  use ExUnit.Case
 
   alias Emoodji.User
 
-  @valid_attrs %{}
-  @invalid_attrs %{}
+  @valid_attrs %{"name" => "Anton"}
+  @invalid_attrs %{"user_id" => 1}
 
   test "changeset with valid attributes" do
     changeset = User.changeset(%User{}, @valid_attrs)
